@@ -1,0 +1,15 @@
+Moves
+('peid_packer', 'packer')
+('raises_exception', '')
+('suspicious_tld', 'tldwatch')
+('allocates_rwx', 'unpacking')
+('applcation_raises_exception', 'exploit')
+('packer_entropy', 'packer')
+('privilege_luid_check', 'privileges')
+('packer_upx', 'packer')
+('uses_windows_utilities', 'commands')
+('antivm_vmware_in_instruction', 'antivm')
+Won
+False
+Msg
+sample is very suspicious

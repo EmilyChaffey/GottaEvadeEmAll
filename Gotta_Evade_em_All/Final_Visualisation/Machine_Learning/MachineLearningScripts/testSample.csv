@@ -1,0 +1,2 @@
+Sample,Signatures,Score
+TestSample,peid_packer,raises_exception,suspicious_tld,allocates_rwx,applcation_raises_exception,packer_entropy,privilege_luid_check,packer_upx,uses_windows_utilities,antivm_vmware_in_instruction,antivirus_virustotal,5.0
