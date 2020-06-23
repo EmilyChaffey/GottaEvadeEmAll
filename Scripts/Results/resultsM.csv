@@ -1,0 +1,107 @@
+Signature,Occurrence,Description
+has_authenticode,7,This executable is signed
+suspicious_tld,27,Resolves a suspicious Top Level Domain (TLD)
+allocates_rwx,60,Allocates read-write-execute memory (usually to unpack itself)
+packer_entropy,30,The binary likely contains encrypted or compressed data indicative of a packer
+antivm_queries_computername,30,Queries for the computername
+antivm_memory_available,28,"Checks amount of memory in system, this can be used to detect virtual machines that have a low amount of memory available"
+pe_features,13,The executable contains unknown PE section names indicative of a packer (could be a false positive)
+raises_exception,15,One or more processes crashed
+antisandbox_foregroundwindows,10,Checks whether any human activity is being performed by constantly checking whether the foreground window changed
+antisandbox_sleep,18,A process attempted to delay the analysis task.
+antivm_disk_size,12,Queries the disk size which could be used to detect virtual machine with small fixed size or dynamic allocation
+creates_shortcut,15,Creates a shortcut to an executable file
+dropper,6,Drops a binary and executes it
+antivm_network_adapters,13,Checks adapter addresses which can be used to detect virtual network interfaces
+privilege_luid_check,25,Checks for the Locally Unique Identifier on the system for a suspicious privilege
+queries_programs,6,Queries for potentially installed applications
+uses_windows_utilities,14,Uses Windows utilities for basic Windows functionality
+browser_security,2,Attempts to modify browser security settings
+infostealer_keylogger,4,Creates a windows hook that monitors keyboard input (keylogger)
+modifies_proxy_wpad,9,Sets or modifies WPAD proxy autoconfiguration file for traffic interception
+multiple_useragents,1,Network activity contains more than one unique useragent
+injection_resumethread,7,Resumed a suspended thread in a remote process potentially indicative of process injection
+checks_debugger,20,Checks if process is being debugged by a debugger
+generates_crypto_key,13,Uses Windows APIs to generate a cryptographic key
+p2p_cnc,77,Communication to multiple IPs on high port numbers possibly indicative of a peer-to-peer (P2P) or non-standard command and control protocol
+exe_appdata,22,Drops an executable to the user AppData folder
+stealth_window,9,A process created a hidden window
+peid_packer,24,The executable uses a known packer
+deletes_executed_files,8,Deletes executed files from disk
+disables_proxy,4,Disables proxy possibly for traffic interception
+infostealer_browser,12,Steals private information from local Internet browsers
+antisandbox_idletime,9,Looks for the Windows Idle Time to determine the uptime
+antivm_generic_cpu,6,"Checks the CPU name from registry, possibly for anti-virtualization"
+antisandbox_cuckoo_files,10,Attempts to detect Cuckoo Sandbox through the presence of a file
+console_output,18,Command line console output was observed
+packer_upx,6,The executable is compressed using UPX
+antivm_vbox_keys,11,Detects VirtualBox through the presence of a registry key
+injection_runpe,6,"Executed a process and injected code into it, probably while unpacking"
+has_pdb,9,This executable has a PDB path
+antidbg_windows,8,Checks for the presence of known windows from debuggers and forensic tools
+recon_fingerprint,5,"Collects information to fingerprint the system (MachineGuid, DigitalProductId, SystemBiosDate)"
+creates_hidden_file,5,Creates hidden or system file
+has_wmi,7,Executes one or more WMI queries
+moves_self,4,Moves the original executable to a new location
+terminates_remote_process,4,Terminates another process
+persistence_autorun,18,Installs itself for autorun at Windows startup
+dumped_buffer,12,"One or more potentially interesting buffers were extracted, these generally contain injected code, configuration data, etc."
+creates_doc,3,Creates (office) documents on the filesystem
+suspicious_process,5,Creates a suspicious process
+protection_rx,5,Changes read-write memory protection to read-execute (probably to avoid detection when setting all RWX flags at the same time)
+nolookup_communication,10,Communicates with host for which no DNS query was performed
+bypass_firewall,1,Operates on local firewall's policies and settings
+ransomware_dropped_files,1,Drops 188 unknown file mime types indicative of ransomware writing encrypted files back to disk
+ransomware_message,3,Writes a potential ransom message to disk
+antivm_vbox_devices,1,Detects VirtualBox through the presence of a device
+antivm_vbox_files,7,Detects VirtualBox through the presence of a file
+ransomware_file_moves,3,Performs 104 file moves indicative of a ransomware file encryption process
+ransomware_appends_extensions,3,Appends a new file extension or content to 104 files indicative of a ransomware file encryption process
+network_bind,3,Starts servers listening
+infostealer_bitcoin,3,Attempts to access Bitcoin/ALTCoin wallets
+creates_largekey,4,"Creates or sets a registry key to a long series of bytes, possibly to store a binary or malware config"
+infostealer_ftp,3,Harvests credentials from local FTP client softwares
+rat_hupigon,5,"Creates known Hupigon files, registry keys and/or mutexes"
+recon_programs,3,Collects information about installed applications
+infostealer_mail,3,Harvests credentials from local email clients
+ransomware_extensions,4,Appends a known multi-family ransomware file extension to files that have been encrypted
+dead_host,9,Connects to an IP address that is no longer responding to requests (legitimate services will remain up-and-running usually)
+pe_unknown_resource_name,8,The file contains an unknown PE resource name possibly indicative of a packer
+detect_putty,3,"Putty Files, Registry Keys and/or Mutexes Detected"
+ransomware_mass_file_delete,1,"Deletes a large number of files from the system indicative of ransomware, wiper malware or system destruction"
+suspicious_command_tools,1,Uses suspicious command line tools or Windows utilities
+creates_service,3,Creates a service
+locates_browser,1,Tries to locate where the browsers are installed
+origin_langid,4,Foreign language identified in PE resource
+dumped_buffer2,6,One or more of the buffers contains an embedded PE file
+injection_process_search,6,"Searches running processes potentially to identify processes for sandbox evasion, code injection or memory dumping"
+SipStun,1,Connects to SIP Stun Server
+dyreza,1,"Creates known Dyreza Banking Trojan files, registry keys and/or mutexes"
+injection_modifies_memory,3,Manipulates memory of a non-child process indicative of process injection
+injection_network_trafic,1,Network communications indicative of possible code injection originated from the process explorer.exe
+injection_queueapcthread,1,Creates a thread using NtQueueApcThread in a remote process potentially indicative of process injection
+process_interest,2,Expresses interest in specific running processes
+recon_beacon,3,A process performed obfuscation on information about the computer or sent it to a remote location indicative of CnC Traffic/Preperations.
+antiav_detectreg,1,Attempts to identify installed AV products by registry key
+antivm_generic_services,1,"Enumerates services, possibly for anti-virtualization"
+shutdown_system,1,Loads a driver
+networkdyndns_checkip,3,Connects to a Dynamic DNS Domain
+allocates_execute_remote_process,6,Allocates execute permission to another process indicative of possible code injection
+injection_ntsetcontextthread,5,Used NtSetContextThread to modify a thread in a remote process indicative of process injection
+njrat,1,"Creates known NJRat files, registry keys and/or mutexes"
+locates_sniffer,1,Tries to locate whether any sniffers are installed
+reads_user_agent,3,Reads the systems User Agent and subsequently performs requests
+antiav_detectfile,1,Attempts to identify installed AV products by installation directory
+persistence_registry_javascript,1,Used JavaScript in registry key value likely for persistance
+process_martian,1,One or more non-whitelisted processes were created
+win32_process_create,1,Uses WMI to create a new process
+process_needed,1,"Repeatedly searches for a not-found process, you may want to run a web browser during analysis"
+injection_write_memory,3,Potential code injection by writing to the memory of another process
+injection_write_memory_exe,2,Code injection by writing an executable or DLL to the memory of another process
+removes_zoneid_ads,2,Attempts to remove evidence of file being downloaded from the Internet
+injection_createremotethread,2,Creates a thread using CreateRemoteThread in a non-child process indicative of process injection
+bad_certificate,1,Contains known-bad certificates
+wmi_antivm,2,Executes one or more WMI queries which can be used to identify virtual machines
+recon_checkip,1,Looks up the external IP address
+applcation_raises_exception,1,An application raised an exception which may be indicative of an exploit crash
+antivm_vmware_in_instruction,1,Detects VMWare through the in instruction feature
