@@ -1,0 +1,107 @@
+Signature;xVal; Occurrence;Description
+has{\_}authenticode;1;7;This executable is signed
+suspicious{\_}tld;2;27;Resolves a suspicious Top Level Domain (TLD)
+allocates{\_}rwx;3;60;Allocates read-write-execute memory (usually to unpack itself)
+packer{\_}entropy;4;30;The binary likely contains encrypted or compressed data indicative of a packer
+antivm{\_}queries{\_}computername;5;30;Queries for the computername
+antivm{\_}memory{\_}available;6;28;Checks amount of memory in system, this can be used to detect virtual machines that have a low amount of memory available
+pe{\_}features;7;13;The executable contains unknown PE section names indicative of a packer (could be a false positive)
+raises{\_}exception;8;15;One or more processes crashed
+antisandbox{\_}foregroundwindows;9;10;Checks whether any human activity is being performed by constantly checking whether the foreground window changed
+antisandbox{\_}sleep;10;18;A process attempted to delay the analysis task.
+antivm{\_}disk{\_}size;11;12;Queries the disk size which could be used to detect virtual machine with small fixed size or dynamic allocation
+creates{\_}shortcut;12;15;Creates a shortcut to an executable file
+dropper;13;6;Drops a binary and executes it
+antivm{\_}network{\_}adapters;14;13;Checks adapter addresses which can be used to detect virtual network interfaces
+privilege{\_}luid{\_}check;15;25;Checks for the Locally Unique Identifier on the system for a suspicious privilege
+queries{\_}programs;16;6;Queries for potentially installed applications
+uses{\_}windows{\_}utilities;17;14;Uses Windows utilities for basic Windows functionality
+browser{\_}security;18;2;Attempts to modify browser security settings
+infostealer{\_}keylogger;19;4;Creates a windows hook that monitors keyboard input (keylogger)
+modifies{\_}proxy{\_}wpad;20;9;Sets or modifies WPAD proxy autoconfiguration file for traffic interception
+multiple{\_}useragents;21;1;Network activity contains more than one unique useragent
+injection{\_}resumethread;22;7;Resumed a suspended thread in a remote process potentially indicative of process injection
+checks{\_}debugger;23;20;Checks if process is being debugged by a debugger
+generates{\_}crypto{\_}key;24;13;Uses Windows APIs to generate a cryptographic key
+p2p{\_}cnc;25;77;Communication to multiple IPs on high port numbers possibly indicative of a peer-to-peer (P2P) or non-standard command and control protocol
+exe{\_}appdata;26;22;Drops an executable to the user AppData folder
+stealth{\_}window;27;9;A process created a hidden window
+peid{\_}packer;28;24;The executable uses a known packer
+deletes{\_}executed{\_}files;29;8;Deletes executed files from disk
+disables{\_}proxy;30;4;Disables proxy possibly for traffic interception
+infostealer{\_}browser;31;12;Steals private information from local Internet browsers
+antisandbox{\_}idletime;32;9;Looks for the Windows Idle Time to determine the uptime
+antivm{\_}generic{\_}cpu;33;6;Checks the CPU name from registry, possibly for anti-virtualization
+antisandbox{\_}cuckoo{\_}files;34;10;Attempts to detect Cuckoo Sandbox through the presence of a file
+console{\_}output;35;18;Command line console output was observed
+packer{\_}upx;36;6;The executable is compressed using UPX
+antivm{\_}vbox{\_}keys;37;11;Detects VirtualBox through the presence of a registry key
+injection{\_}runpe;38;6;Executed a process and injected code into it, probably while unpacking
+has{\_}pdb;39;9;This executable has a PDB path
+antidbg{\_}windows;40;8;Checks for the presence of known windows from debuggers and forensic tools
+recon{\_}fingerprint;41;5;Collects information to fingerprint the system (MachineGuid, DigitalProductId, SystemBiosDate)
+creates{\_}hidden{\_}file;42;5;Creates hidden or system file
+has{\_}wmi;43;7;Executes one or more WMI queries
+moves{\_}self;44;4;Moves the original executable to a new location
+terminates{\_}remote{\_}process;45;4;Terminates another process
+persistence{\_}autorun;46;18;Installs itself for autorun at Windows startup
+dumped{\_}buffer;47;12;One or more potentially interesting buffers were extracted, these generally contain injected code, configuration data, etc.
+creates{\_}doc;48;3;Creates (office) documents on the filesystem
+suspicious{\_}process;49;5;Creates a suspicious process
+protection{\_}rx;50;5;Changes read-write memory protection to read-execute (probably to avoid detection when setting all RWX flags at the same time)
+nolookup{\_}communication;51;10;Communicates with host for which no DNS query was performed
+bypass{\_}firewall;52;1;Operates on local firewall's policies and settings
+ransomware{\_}dropped{\_}files;53;1;Drops 188 unknown file mime types indicative of ransomware writing encrypted files back to disk
+ransomware{\_}message;54;3;Writes a potential ransom message to disk
+antivm{\_}vbox{\_}devices;55;1;Detects VirtualBox through the presence of a device
+antivm{\_}vbox{\_}files;56;7;Detects VirtualBox through the presence of a file
+ransomware{\_}file{\_}moves;57;3;Performs 104 file moves indicative of a ransomware file encryption process
+ransomware{\_}appends{\_}extensions;58;3;Appends a new file extension or content to 104 files indicative of a ransomware file encryption process
+network{\_}bind;59;3;Starts servers listening
+infostealer{\_}bitcoin;60;3;Attempts to access Bitcoin/ALTCoin wallets
+creates{\_}largekey;61;4;Creates or sets a registry key to a long series of bytes, possibly to store a binary or malware config
+infostealer{\_}ftp;62;3;Harvests credentials from local FTP client softwares
+rat{\_}hupigon;63;5;Creates known Hupigon files, registry keys and/or mutexes
+recon{\_}programs;64;3;Collects information about installed applications
+infostealer{\_}mail;65;3;Harvests credentials from local email clients
+ransomware{\_}extensions;66;4;Appends a known multi-family ransomware file extension to files that have been encrypted
+dead{\_}host;67;9;Connects to an IP address that is no longer responding to requests (legitimate services will remain up-and-running usually)
+pe{\_}unknown{\_}resource{\_}name;68;8;The file contains an unknown PE resource name possibly indicative of a packer
+detect{\_}putty;69;3;Putty Files, Registry Keys and/or Mutexes Detected
+ransomware{\_}mass{\_}file{\_}delete;70;1;Deletes a large number of files from the system indicative of ransomware, wiper malware or system destruction
+suspicious{\_}command{\_}tools;71;1;Uses suspicious command line tools or Windows utilities
+creates{\_}service;72;3;Creates a service
+locates{\_}browser;73;1;Tries to locate where the browsers are installed
+origin{\_}langid;74;4;Foreign language identified in PE resource
+dumped{\_}buffer2;75;6;One or more of the buffers contains an embedded PE file
+injection{\_}process{\_}search;76;6;Searches running processes potentially to identify processes for sandbox evasion, code injection or memory dumping
+SipStun;77;1;Connects to SIP Stun Server
+dyreza;78;1;Creates known Dyreza Banking Trojan files, registry keys and/or mutexes
+injection{\_}modifies{\_}memory;79;3;Manipulates memory of a non-child process indicative of process injection
+injection{\_}network{\_}trafic;80;1;Network communications indicative of possible code injection originated from the process explorer.exe
+injection{\_}queueapcthread;81;1;Creates a thread using NtQueueApcThread in a remote process potentially indicative of process injection
+process{\_}interest;82;2;Expresses interest in specific running processes
+recon{\_}beacon;83;3;A process performed obfuscation on information about the computer or sent it to a remote location indicative of CnC Traffic/Preperations.
+antiav{\_}detectreg;84;1;Attempts to identify installed AV products by registry key
+antivm{\_}generic{\_}services;85;1;Enumerates services, possibly for anti-virtualization
+shutdown{\_}system;86;1;Loads a driver
+networkdyndns{\_}checkip;87;3;Connects to a Dynamic DNS Domain
+allocates{\_}execute{\_}remote{\_}process;88;6;Allocates execute permission to another process indicative of possible code injection
+injection{\_}ntsetcontextthread;89;5;Used NtSetContextThread to modify a thread in a remote process indicative of process injection
+njrat;90;1;Creates known NJRat files, registry keys and/or mutexes
+locates{\_}sniffer;91;1;Tries to locate whether any sniffers are installed
+reads{\_}user{\_}agent;92;3;Reads the systems User Agent and subsequently performs requests
+antiav{\_}detectfile;93;1;Attempts to identify installed AV products by installation directory
+persistence{\_}registry{\_}javascript;94;1;Used JavaScript in registry key value likely for persistance
+process{\_}martian;95;1;One or more non-whitelisted processes were created
+win32{\_}process{\_}create;96;1;Uses WMI to create a new process
+process{\_}needed;97;1;Repeatedly searches for a not-found process, you may want to run a web browser during analysis
+injection{\_}write{\_}memory;98;3;Potential code injection by writing to the memory of another process
+injection{\_}write{\_}memory{\_}exe;99;2;Code injection by writing an executable or DLL to the memory of another process
+removes{\_}zoneid{\_}ads;100;2;Attempts to remove evidence of file being downloaded from the Internet
+injection{\_}createremotethread;101;2;Creates a thread using CreateRemoteThread in a non-child process indicative of process injection
+bad{\_}certificate;102;1;Contains known-bad certificates
+wmi{\_}antivm;103;2;Executes one or more WMI queries which can be used to identify virtual machines
+recon{\_}checkip;104;1;Looks up the external IP address
+applcation{\_}raises{\_}exception;105;1;An application raised an exception which may be indicative of an exploit crash
+antivm{\_}vmware{\_}in{\_}instruction;106;1;Detects VMWare through the in instruction feature

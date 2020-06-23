@@ -1,0 +1,72 @@
+Signature,Occurrence,Description
+has_authenticode,65,This executable is signed
+has_pdb,29,This executable has a PDB path
+pe_unknown_resource_name,30,The file contains an unknown PE resource name possibly indicative of a packer
+antivm_memory_available,45,"Checks amount of memory in system, this can be used to detect virtual machines that have a low amount of memory available"
+injection_process_search,11,"Searches running processes potentially to identify processes for sandbox evasion, code injection or memory dumping"
+antivirus_virustotal,60,File has been identified by one AntiVirus engine on VirusTotal as malicious
+antivm_queries_computername,23,Queries for the computername
+checks_debugger,13,Checks if process is being debugged by a debugger
+pe_features,54,The executable contains unknown PE section names indicative of a packer (could be a false positive)
+raises_exception,15,One or more processes crashed
+allocates_rwx,45,Allocates read-write-execute memory (usually to unpack itself)
+antivm_disk_size,16,Queries the disk size which could be used to detect virtual machine with small fixed size or dynamic allocation
+exe_appdata,18,Drops an executable to the user AppData folder
+queries_programs,14,Queries for potentially installed applications
+deletes_executed_files,2,Deletes executed files from disk
+peid_packer,47,The executable uses a known packer
+origin_langid,5,Foreign language identified in PE resource
+generates_crypto_key,3,Uses Windows APIs to generate a cryptographic key
+recon_fingerprint,3,"Collects information to fingerprint the system (MachineGuid, DigitalProductId, SystemBiosDate)"
+suspicious_tld,19,Resolves a suspicious Top Level Domain (TLD)
+has_wmi,3,Executes one or more WMI queries
+antivm_network_adapters,10,Checks adapter addresses which can be used to detect virtual network interfaces
+privilege_luid_check,12,Checks for the Locally Unique Identifier on the system for a suspicious privilege
+wmi_antivm,1,Executes one or more WMI queries which can be used to identify virtual machines
+antisandbox_idletime,2,Looks for the Windows Idle Time to determine the uptime
+antisandbox_sleep,10,A process attempted to delay the analysis task.
+antivm_generic_cpu,2,"Checks the CPU name from registry, possibly for anti-virtualization"
+exploit_heapspray,1,A potential heapspray has been detected. 53 megabytes was sprayed onto the heap of the AdiIRC.exe process
+antiemu_wine,2,Detects the presence of Wine emulator
+networkdyndns_checkip,1,Connects to a Dynamic DNS Domain
+recon_checkip,1,Looks up the external IP address
+packer_entropy,59,The binary likely contains encrypted or compressed data indicative of a packer
+packer_upx,31,The executable is compressed using UPX
+console_output,28,Command line console output was observed
+antisandbox_foregroundwindows,6,Checks whether any human activity is being performed by constantly checking whether the foreground window changed
+creates_shortcut,15,Creates a shortcut to an executable file
+infostealer_keylogger,4,Creates a windows hook that monitors keyboard input (keylogger)
+creates_hidden_file,4,Creates hidden or system file
+modifies_proxy_wpad,3,Sets or modifies WPAD proxy autoconfiguration file for traffic interception
+multiple_useragents,2,Network activity contains more than one unique useragent
+infostealer_ftp,1,Harvests credentials from local FTP client softwares
+locates_browser,1,Tries to locate where the browsers are installed
+infostealer_browser,8,Steals private information from local Internet browsers
+recon_programs,2,Collects information about installed applications
+antivm_vbox_files,6,Detects VirtualBox through the presence of a file
+antivm_vbox_keys,3,Detects VirtualBox through the presence of a registry key
+suspicious_process,5,Creates a suspicious process
+stealth_window,2,A process created a hidden window
+uses_windows_utilities,3,Uses Windows utilities for basic Windows functionality
+persistence_autorun,9,Installs itself for autorun at Windows startup
+sniffer_winpcap,1,Installs WinPCAP
+process_interest,2,Expresses interest in specific running processes
+trojan_dapato,1,"Creates known Dapato Trojan files, registry keys and/or mutexes"
+shutdown_system,1,Loads a driver
+rat_hupigon,1,"Creates known Hupigon files, registry keys and/or mutexes"
+stops_service,1,Stops Windows services
+antisandbox_cuckoo_files,7,Attempts to detect Cuckoo Sandbox through the presence of a file
+infostealer_mail,1,Harvests credentials from local email clients
+protection_rx,3,Changes read-write memory protection to read-execute (probably to avoid detection when setting all RWX flags at the same time)
+process_needed,1,"Repeatedly searches for a not-found process, you may want to run a web browser during analysis"
+antiav_detectfile,1,Attempts to identify installed AV products by installation directory
+exec_crash,2,At least one process apparently crashed during execution
+creates_service,4,Creates a service
+antivm_vbox_devices,1,Detects VirtualBox through the presence of a device
+ransomware_message,1,Writes a potential ransom message to disk
+network_tor,1,Installs Tor on the machine
+applcation_raises_exception,2,An application raised an exception which may be indicative of an exploit crash
+injection_resumethread,1,Resumed a suspended thread in a remote process potentially indicative of process injection
+upatre,1,"Creates known Upatre files, registry keys and/or mutexes"
+ransomware_extensions,1,Appends a known multi-family ransomware file extension to files that have been encrypted
+antidbg_windows,1,Checks for the presence of known windows from debuggers and forensic tools
