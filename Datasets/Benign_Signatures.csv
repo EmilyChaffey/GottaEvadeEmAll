@@ -1,0 +1,72 @@
+Signature;xVal; Occurrence;Description
+has{\_}authenticode;1; 65;This executable is signed
+has{\_}pdb;2; 29;This executable has a PDB path
+pe{\_}unknown{\_}resource{\_}name;3; 30;The file contains an unknown PE resource name possibly indicative of a packer
+antivm{\_}memory{\_}available;4; 45;Checks amount of memory in system, this can be used to detect virtual machines that have a low amount of memory available
+injection{\_}process{\_}search;5; 11;Searches running processes potentially to identify processes for sandbox evasion, code injection or memory dumping
+antivirus{\_}virustotal;6; 60;File has been identified by one AntiVirus engine on VirusTotal as malicious
+antivm{\_}queries{\_}computername;7; 23;Queries for the computername
+checks{\_}debugger;8; 13;Checks if process is being debugged by a debugger
+pe{\_}features;9; 54;The executable contains unknown PE section names indicative of a packer (could be a false positive)
+raises{\_}exception;10; 15;One or more processes crashed
+allocates{\_}rwx;11; 45;Allocates read-write-execute memory (usually to unpack itself)
+antivm{\_}disk{\_}size;12; 16;Queries the disk size which could be used to detect virtual machine with small fixed size or dynamic allocation
+exe{\_}appdata;13; 18;Drops an executable to the user AppData folder
+queries{\_}programs;14; 14;Queries for potentially installed applications
+deletes{\_}executed{\_}files;15; 2;Deletes executed files from disk
+peid{\_}packer;16; 47;The executable uses a known packer
+origin{\_}langid;17; 5;Foreign language identified in PE resource
+generates{\_}crypto{\_}key;18; 3;Uses Windows APIs to generate a cryptographic key
+recon{\_}fingerprint;19; 3;Collects information to fingerprint the system (MachineGuid, DigitalProductId, SystemBiosDate)
+suspicious{\_}tld;20; 19;Resolves a suspicious Top Level Domain (TLD)
+has{\_}wmi;21; 3;Executes one or more WMI queries
+antivm{\_}network{\_}adapters;22; 10;Checks adapter addresses which can be used to detect virtual network interfaces
+privilege{\_}luid{\_}check;23; 12;Checks for the Locally Unique Identifier on the system for a suspicious privilege
+wmi{\_}antivm;24; 1;Executes one or more WMI queries which can be used to identify virtual machines
+antisandbox{\_}idletime;25; 2;Looks for the Windows Idle Time to determine the uptime
+antisandbox{\_}sleep;26; 10;A process attempted to delay the analysis task.
+antivm{\_}generic{\_}cpu;27; 2;Checks the CPU name from registry, possibly for anti-virtualization
+exploit{\_}heapspray;28; 1;A potential heapspray has been detected. 53 megabytes was sprayed onto the heap of the AdiIRC.exe process
+antiemu{\_}wine;29; 2;Detects the presence of Wine emulator
+networkdyndns{\_}checkip;30; 1;Connects to a Dynamic DNS Domain
+recon{\_}checkip;31; 1;Looks up the external IP address
+packer{\_}entropy;32; 59;The binary likely contains encrypted or compressed data indicative of a packer
+packer{\_}upx;33; 31;The executable is compressed using UPX
+console{\_}output;34; 28;Command line console output was observed
+antisandbox{\_}foregroundwindows;35; 6;Checks whether any human activity is being performed by constantly checking whether the foreground window changed
+creates{\_}shortcut;36; 15;Creates a shortcut to an executable file
+infostealer{\_}keylogger;37; 4;Creates a windows hook that monitors keyboard input (keylogger)
+creates{\_}hidden{\_}file;38; 4;Creates hidden or system file
+modifies{\_}proxy{\_}wpad;39; 3;Sets or modifies WPAD proxy autoconfiguration file for traffic interception
+multiple{\_}useragents;40; 2;Network activity contains more than one unique useragent
+infostealer{\_}ftp;41; 1;Harvests credentials from local FTP client softwares
+locates{\_}browser;42; 1;Tries to locate where the browsers are installed
+infostealer{\_}browser;43; 8;Steals private information from local Internet browsers
+recon{\_}programs;44; 2;Collects information about installed applications
+antivm{\_}vbox{\_}files;45; 6;Detects VirtualBox through the presence of a file
+antivm{\_}vbox{\_}keys;46; 3;Detects VirtualBox through the presence of a registry key
+suspicious{\_}process;47; 5;Creates a suspicious process
+stealth{\_}window;48; 2;A process created a hidden window
+uses{\_}windows{\_}utilities;49; 3;Uses Windows utilities for basic Windows functionality
+persistence{\_}autorun;50; 9;Installs itself for autorun at Windows startup
+sniffer{\_}winpcap;51; 1;Installs WinPCAP
+process{\_}interest;52; 2;Expresses interest in specific running processes
+trojan{\_}dapato;53; 1;Creates known Dapato Trojan files, registry keys and/or mutexes
+shutdown{\_}system;54; 1;Loads a driver
+rat{\_}hupigon;55; 1;Creates known Hupigon files, registry keys and/or mutexes
+stops{\_}service;56; 1;Stops Windows services
+antisandbox{\_}cuckoo{\_}files;57; 7;Attempts to detect Cuckoo Sandbox through the presence of a file
+infostealer{\_}mail;58; 1;Harvests credentials from local email clients
+protection{\_}rx;59; 3;Changes read-write memory protection to read-execute (probably to avoid detection when setting all RWX flags at the same time)
+process{\_}needed;60; 1;Repeatedly searches for a not-found process, you may want to run a web browser during analysis
+antiav{\_}detectfile;61; 1;Attempts to identify installed AV products by installation directory
+exec{\_}crash;62; 2;At least one process apparently crashed during execution
+creates{\_}service;63; 4;Creates a service
+antivm{\_}vbox{\_}devices;64; 1;Detects VirtualBox through the presence of a device
+ransomware{\_}message;65; 1;Writes a potential ransom message to disk
+network{\_}tor;66; 1;Installs Tor on the machine
+applcation{\_}raises{\_}exception;67; 2;An application raised an exception which may be indicative of an exploit crash
+injection{\_}resumethread;68; 1;Resumed a suspended thread in a remote process potentially indicative of process injection
+upatre;69; 1;Creates known Upatre files, registry keys and/or mutexes
+ransomware{\_}extensions;70; 1;Appends a known multi-family ransomware file extension to files that have been encrypted
+antidbg{\_}windows;71; 1;Checks for the presence of known windows from debuggers and forensic tools
