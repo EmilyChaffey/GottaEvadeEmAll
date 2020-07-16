@@ -1,4 +1,4 @@
-"""Gotta Evade 'em All - Emily Chaffey - Full Unit 1920 IY4500 """
+"""Gotta Evade 'em All - Emily Chaffey"""
 
 """ This class is the report parser, which applies some transformations to the data."""
 

@@ -1,4 +1,4 @@
-"""Gotta Evade 'em All - Emily Chaffey - Full Unit 1920 IY4500 """
+"""Gotta Evade 'em All - Emily Chaffey"""
 
 """ This class displays the start screen and (like a game) requires you to click in order to proceed."""
 

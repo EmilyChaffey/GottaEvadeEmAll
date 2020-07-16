@@ -1,4 +1,4 @@
-"""Gotta Evade 'em All - Emily Chaffey - Full Unit 1920 IY4500 """
+"""Gotta Evade 'em All - Emily Chaffey"""
 
 """ This class compares different machine learning classifiers and generates graphs comparing them."""
 

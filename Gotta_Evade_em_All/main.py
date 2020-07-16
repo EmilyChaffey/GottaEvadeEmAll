@@ -1,4 +1,4 @@
-"""Gotta Evade 'em All - Emily Chaffey - Full Unit 1920 IY4500 """
+"""Gotta Evade 'em All - Emily Chaffey"""
 
 """ This is the main. Running this class: opens the ubuntu vm, runs the parser engine, filters the categories and runs the visualisation software"""
 

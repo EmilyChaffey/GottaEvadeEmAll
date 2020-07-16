@@ -1,4 +1,4 @@
-"""Gotta Evade 'em All - Emily Chaffey - Full Unit 1920 IY4500 """
+"""Gotta Evade 'em All - Emily Chaffey"""
 
 """ This class generates the moves based on the data passed through the arguments in the __init__ function."""
 

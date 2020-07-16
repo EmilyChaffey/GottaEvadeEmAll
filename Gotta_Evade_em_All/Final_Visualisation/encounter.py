@@ -1,4 +1,4 @@
-"""Gotta Evade 'em All - Emily Chaffey - Full Unit 1920 IY4500 """
+"""Gotta Evade 'em All - Emily Chaffey"""
 
 """ This class deals with the visualisation of an encounter. i.e. the first piece of animation when the ams 'meets' the malware."""
 
