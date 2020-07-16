@@ -1,4 +1,4 @@
-"""Gotta Evade 'em All - Emily Chaffey - Full Unit 1920 IY4500 """
+"""Gotta Evade 'em All - Emily Chaffey"""
 
 """ This is a singleton class which stores all of the visualisation data. It has getters and setters so that the data is easy to access."""
 

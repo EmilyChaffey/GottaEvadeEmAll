@@ -19,4 +19,5 @@
     ```sh
         pip install scikitlearn  
         pip install numpy
+        pip install arcade
     ```
